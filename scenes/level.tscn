@@ -1,12 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://ena3j1xs88qo"]
+[gd_scene load_steps=7 format=3 uid="uid://ena3j1xs88qo"]
 
 [ext_resource type="Texture2D" uid="uid://bfcy68bi306i4" path="res://icon.svg" id="1_4dw0p"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_kscwo"]
 [ext_resource type="PackedScene" uid="uid://dypj618bp5h6a" path="res://scenes/player.tscn" id="2_t1d67"]
+[ext_resource type="PackedScene" uid="uid://b6w3xc0u2o77p" path="res://scenes/flip_point.tscn" id="3_2bqkp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dlwo"]
+size = Vector2(129, 126)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27qo3"]
 size = Vector2(1217, 127)
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_kscwo")
+
+[node name="World B" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World B" groups=["world_b"]]
+
+[node name="Sprite2D2" type="Sprite2D" parent="World B/StaticBody2D"]
+position = Vector2(914, 150)
+texture = ExtResource("1_4dw0p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World B/StaticBody2D"]
+position = Vector2(913.5, 150)
+shape = SubResource("RectangleShape2D_4dlwo")
+
+[node name="World A" type="Node2D" parent="." groups=["world_a"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="World A"]
+position = Vector2(163, 150)
+texture = ExtResource("1_4dw0p")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(534, 348)
@@ -21,5 +45,7 @@ texture = ExtResource("1_4dw0p")
 position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_27qo3")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_t1d67")]
-position = Vector2(538, 183)
+[node name="FlipPoint" parent="." instance=ExtResource("3_2bqkp")]
+
+[node name="Player" parent="." instance=ExtResource("2_t1d67")]
+position = Vector2(491, 153)
