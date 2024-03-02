@@ -3,7 +3,7 @@ class_name Player
 
 @export var gravity = 400
 @export var jump_force = 200
-@export var speed = 125
+@export var speed = 200
 
 var active = true
 
