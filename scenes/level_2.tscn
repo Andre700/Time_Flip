@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://depyhy57y4ggq"]
+
+[ext_resource type="PackedScene" uid="uid://bw07ugmu35qqd" path="res://scenes/tile_map.tscn" id="1_nn1e6"]
+[ext_resource type="PackedScene" uid="uid://mey7pkjbgv0t" path="res://scenes/start.tscn" id="2_xfeb7"]
+[ext_resource type="PackedScene" uid="uid://dypj618bp5h6a" path="res://scenes/player.tscn" id="3_ufas2"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_nn1e6")]
+layer_0/tile_data = PackedInt32Array(589824, 1, 4, 524288, 262145, 0, 458752, 262145, 4, 393216, 262145, 0, 327680, 262145, 4, 262144, 262145, 0, 196608, 262145, 4, 131072, 262145, 0, 65536, 262145, 4, 0, 262145, 0, 589841, 262145, 4, 589840, 1, 4, 589839, 262145, 4, 589838, 1, 4, 589837, 262145, 4, 589836, 1, 4, 589835, 262145, 4, 589834, 1, 4, 589833, 262145, 4, 589832, 1, 4, 589831, 262145, 4, 589830, 1, 4, 589829, 262145, 4, 589828, 1, 4, 589827, 262145, 4, 589826, 1, 4, 589825, 262145, 4, 524305, 1, 4, 458769, 1, 0, 393233, 1, 4, 327697, 1, 0, 262161, 1, 4, 196625, 1, 0, 131089, 1, 4, 65553, 1, 4, 17, 1, 0, 16, 262145, 4, 15, 1, 4, 14, 262145, 4, 13, 1, 4, 12, 262145, 4, 11, 1, 4, 10, 262145, 4, 9, 1, 4, 8, 262145, 4, 7, 1, 4, 6, 262145, 4, 5, 1, 4, 4, 262145, 4, 3, 1, 4, 2, 262145, 4, 1, 1, 4)
+
+[node name="Start" parent="." instance=ExtResource("2_xfeb7")]
+position = Vector2(542, 566)
+
+[node name="Player" parent="." instance=ExtResource("3_ufas2")]
+position = Vector2(541, 369)

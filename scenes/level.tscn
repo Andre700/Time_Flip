@@ -1,22 +1,28 @@
-[gd_scene load_steps=7 format=3 uid="uid://ena3j1xs88qo"]
+[gd_scene load_steps=11 format=3 uid="uid://ena3j1xs88qo"]
 
 [ext_resource type="Texture2D" uid="uid://bfcy68bi306i4" path="res://icon.svg" id="1_4dw0p"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_kscwo"]
+[ext_resource type="PackedScene" uid="uid://depyhy57y4ggq" path="res://scenes/level_2.tscn" id="2_r774b"]
 [ext_resource type="PackedScene" uid="uid://dypj618bp5h6a" path="res://scenes/player.tscn" id="2_t1d67"]
 [ext_resource type="PackedScene" uid="uid://b6w3xc0u2o77p" path="res://scenes/flip_point.tscn" id="3_2bqkp"]
+[ext_resource type="PackedScene" uid="uid://bw07ugmu35qqd" path="res://scenes/tile_map.tscn" id="5_fdpbp"]
+[ext_resource type="PackedScene" uid="uid://mey7pkjbgv0t" path="res://scenes/start.tscn" id="6_ji5yt"]
+[ext_resource type="PackedScene" uid="uid://bbpculpm0s03i" path="res://scenes/exit.tscn" id="7_uqkmu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4dlwo"]
 size = Vector2(129, 126)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27qo3"]
-size = Vector2(1217, 127)
+size = Vector2(1151, 127)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_kscwo")
+next_level = ExtResource("2_r774b")
 
 [node name="World B" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="World B" groups=["world_b"]]
+position = Vector2(30, 224)
 
 [node name="Sprite2D2" type="Sprite2D" parent="World B/StaticBody2D"]
 position = Vector2(914, 150)
@@ -29,23 +35,33 @@ shape = SubResource("RectangleShape2D_4dlwo")
 [node name="World A" type="Node2D" parent="." groups=["world_a"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="World A"]
-position = Vector2(163, 150)
+position = Vector2(237, 361)
 texture = ExtResource("1_4dw0p")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(534, 348)
+position = Vector2(1015, 837)
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(1.5, 1.5)
-scale = Vector2(9.49219, 1.02344)
+position = Vector2(-32.7501, 2)
+scale = Vector2(8.98047, 1.02344)
 texture = ExtResource("1_4dw0p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0.5, -0.5)
+position = Vector2(-32.5, -0.5)
 shape = SubResource("RectangleShape2D_27qo3")
 
 [node name="FlipPoint" parent="." instance=ExtResource("3_2bqkp")]
+position = Vector2(560, 411)
+
+[node name="TileMap" parent="." instance=ExtResource("5_fdpbp")]
+layer_0/tile_data = PackedInt32Array(589824, 1, 4, 524288, 262145, 0, 458752, 262145, 4, 393216, 262145, 0, 327680, 262145, 4, 262144, 262145, 0, 196608, 262145, 4, 131072, 262145, 0, 65536, 262145, 4, 0, 1, 0, 589841, 262145, 4, 589840, 1, 4, 589839, 262145, 4, 589838, 1, 4, 589837, 262145, 4, 589836, 1, 4, 589835, 262145, 4, 589834, 1, 4, 589833, 262145, 4, 589832, 1, 4, 589831, 262145, 4, 589830, 1, 4, 589829, 262145, 4, 589828, 1, 4, 589827, 262145, 4, 589826, 1, 4, 589825, 262145, 4, 524305, 262145, 0, 458769, 262145, 4, 393233, 262145, 0, 327697, 262145, 4, 262161, 262145, 0, 196625, 262145, 4, 131089, 262145, 0, 65553, 262145, 4, 17, 262145, 0, 16, 1, 0, 15, 262145, 4, 14, 1, 4, 13, 262145, 4, 12, 1, 4, 11, 262145, 4, 10, 1, 4, 9, 262145, 4, 8, 1, 4, 7, 262145, 4, 6, 1, 4, 5, 262145, 4, 4, 1, 4, 3, 262145, 4, 2, 1, 4, 1, 262145, 4)
 
 [node name="Player" parent="." instance=ExtResource("2_t1d67")]
-position = Vector2(491, 153)
+position = Vector2(169, 494)
+
+[node name="Start" parent="." instance=ExtResource("6_ji5yt")]
+position = Vector2(169, 568)
+
+[node name="Exit" parent="." instance=ExtResource("7_uqkmu")]
+position = Vector2(975, 566)

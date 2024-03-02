@@ -5,14 +5,18 @@ class_name Player
 @export var jump_force = 200
 @export var speed = 125
 
+var active = true
+
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	if Input.is_action_just_pressed("jump") && is_on_floor():
-		velocity.y = -jump_force
-	
-	var direction = Input.get_axis("move_left", "move_right")
+	var direction = 0
+	if active:
+		if Input.is_action_just_pressed("jump") && is_on_floor():
+			velocity.y = -jump_force
+		
+		direction = Input.get_axis("move_left", "move_right")
 	
 	velocity.x = direction * speed
 	
