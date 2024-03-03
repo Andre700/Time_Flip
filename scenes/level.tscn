@@ -14,28 +14,28 @@
 script = ExtResource("1_kscwo")
 next_level = ExtResource("2_r774b")
 
+[node name="World_A" type="Node2D" parent="." groups=["world_a"]]
+
 [node name="World_B" type="Node2D" parent="." groups=["world_b"]]
 
 [node name="Bridge" parent="World_B" instance=ExtResource("3_qkpjl")]
-position = Vector2(575, 639)
-show = false
-
-[node name="World_A" type="Node2D" parent="." groups=["world_a"]]
+position = Vector2(260, 282)
+start_hidden = true
 
 [node name="FlipPoint" parent="." instance=ExtResource("3_2bqkp")]
-position = Vector2(301, 513)
+position = Vector2(151, 193)
 
 [node name="TileMap" parent="." instance=ExtResource("5_fdpbp")]
-layer_0/tile_data = PackedInt32Array(589824, 1, 4, 524288, 262145, 0, 458752, 262145, 4, 393216, 262145, 0, 327680, 262145, 4, 262144, 262145, 0, 196608, 262145, 4, 131072, 262145, 0, 65536, 262145, 4, 0, 1, 0, 589841, 262145, 4, 589840, 1, 4, 589839, 262145, 4, 589838, 1, 4, 589837, 262145, 4, 589836, 1, 4, 589829, 262145, 4, 589828, 1, 4, 589827, 262145, 4, 589826, 1, 4, 589825, 262145, 4, 524305, 262145, 0, 458769, 262145, 4, 393233, 262145, 0, 327697, 262145, 4, 262161, 262145, 0, 196625, 262145, 4, 131089, 262145, 0, 65553, 262145, 4, 17, 262145, 0, 16, 1, 0, 15, 262145, 4, 14, 1, 4, 13, 262145, 4, 12, 1, 4, 11, 262145, 4, 10, 1, 4, 9, 262145, 4, 8, 1, 4, 7, 262145, 4, 6, 1, 4, 5, 262145, 4, 4, 1, 4, 3, 262145, 4, 2, 1, 4, 1, 262145, 4)
+layer_0/tile_data = PackedInt32Array(262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 327679, 1, 0)
 
 [node name="Start" parent="." instance=ExtResource("6_ji5yt")]
-position = Vector2(169, 568)
+position = Vector2(67, 248)
 
 [node name="Exit" parent="." instance=ExtResource("7_uqkmu")]
-position = Vector2(975, 566)
+position = Vector2(408, 247)
 
 [node name="DeathZone" parent="." instance=ExtResource("9_s2w4b")]
-position = Vector2(0, 719)
+position = Vector2(248, 353)
 
 [node name="Player" parent="." instance=ExtResource("2_t1d67")]
-position = Vector2(169, 494)
+position = Vector2(68, 147)

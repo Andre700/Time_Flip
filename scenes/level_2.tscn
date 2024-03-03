@@ -24,3 +24,7 @@ position = Vector2(963, 567)
 
 [node name="DeathZone" parent="." instance=ExtResource("6_a8ch2")]
 position = Vector2(0, 711)
+
+[node name="World_A" type="Node2D" parent="."]
+
+[node name="World_B" type="Node2D" parent="."]

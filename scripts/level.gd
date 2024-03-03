@@ -39,6 +39,6 @@ func _on_exit_body_entered(body):
 		if next_level:
 			get_tree().change_scene_to_packed(next_level)
 
-func _on_deathzone_body_entered(body):
+func _on_deathzone_body_entered(_body):
 	player.global_position = start.get_spawn_pos()
 	player.velocity = Vector2.ZERO
