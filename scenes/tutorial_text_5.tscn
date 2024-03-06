@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwfejgvptfcgs"]
+
+[ext_resource type="Texture2D" uid="uid://cxjvl170mjl50" path="res://assets/textures/other/key caps.png" id="1_lyd6i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sc2rh"]
+font_size = 11
+
+[node name="Tutorial Text 5" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "With enough keys, use
+to open gates"
+label_settings = SubResource("LabelSettings_sc2rh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(131, 8)
+texture = ExtResource("1_lyd6i")
+region_enabled = true
+region_rect = Rect2(97.2156, 23.1895, 18.3733, 16.2157)

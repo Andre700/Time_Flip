@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddlhfcqqoefwb"]
+
+[ext_resource type="Texture2D" uid="uid://cxjvl170mjl50" path="res://assets/textures/other/key caps.png" id="1_wje3q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j3nqp"]
+font_size = 11
+
+[node name="Tutorial Text 1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 7.0
+offset_right = 93.0
+offset_bottom = 30.0
+text = "Move using:"
+label_settings = SubResource("LabelSettings_j3nqp")
+
+[node name="A" type="Sprite2D" parent="."]
+position = Vector2(77, 16)
+texture = ExtResource("1_wje3q")
+region_enabled = true
+region_rect = Rect2(35.8601, 23.4622, 17.3034, 15.9454)
+
+[node name="D" type="Sprite2D" parent="."]
+position = Vector2(99, 16)
+texture = ExtResource("1_wje3q")
+region_enabled = true
+region_rect = Rect2(73.1628, 23.1892, 18.648, 16.2157)

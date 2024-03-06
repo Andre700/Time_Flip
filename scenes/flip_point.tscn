@@ -61,7 +61,7 @@ visible = false
 position = Vector2(0, -18)
 texture = ExtResource("3_ssh6f")
 region_enabled = true
-region_rect = Rect2(97.4576, 7.10715, 17.7021, 16.4859)
+region_rect = Rect2(97.998, 23.783, 17, 15)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HelpText"]
 libraries = {

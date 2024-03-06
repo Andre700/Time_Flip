@@ -6,7 +6,7 @@ class_name Player
 @onready var tilemap: TileMap = get_tree().get_first_node_in_group("tilemap")
 
 @export var gravity = 400
-@export var jump_force = 200
+@export var jump_force = 180
 @export var speed = 125
 
 var key_amount = 0

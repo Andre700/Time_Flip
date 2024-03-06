@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1rtprnw4sfso"]
+
+[ext_resource type="Texture2D" uid="uid://cxjvl170mjl50" path="res://assets/textures/other/key caps.png" id="1_rgai8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oqbx4"]
+font_size = 11
+
+[node name="Tutorial Text 3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Activating Flip Points with         affects the stage. 
+Letting you overcome obsticles"
+label_settings = SubResource("LabelSettings_oqbx4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(149, 8)
+texture = ExtResource("1_rgai8")
+region_enabled = true
+region_rect = Rect2(97.629, 23.32, 17, 16)
