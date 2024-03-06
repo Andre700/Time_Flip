@@ -25,6 +25,6 @@ func _on_body_entered(body):
 		help_text.visible = true
 		animation_player.play("up_and_down")
 
-func _on_body_exited(body):
+func _on_body_exited(_body):
 	help_text.visible = false
 	animation_player.pause()

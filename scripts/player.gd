@@ -2,12 +2,17 @@ extends CharacterBody2D
 class_name Player
 
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var camera = $Camera2D
+@onready var tilemap: TileMap = get_tree().get_first_node_in_group("tilemap")
 
 @export var gravity = 400
 @export var jump_force = 200
 @export var speed = 125
 
 var active = true
+
+func _ready():
+	set_camera_boundaries()
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -40,3 +45,9 @@ func update_animations(direction):
 			animated_sprite.play("jump")
 		else:
 			animated_sprite.play("fall")
+
+func set_camera_boundaries():
+	var map_limits = tilemap.get_used_rect()
+	var map_cellsize = tilemap.rendering_quadrant_size
+	camera.limit_left = map_limits.position.x * map_cellsize
+	camera.limit_right = map_limits.end.x * map_cellsize
