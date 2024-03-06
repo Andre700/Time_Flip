@@ -1,25 +1,28 @@
 [gd_scene load_steps=4 format=3 uid="uid://bbpculpm0s03i"]
 
-[ext_resource type="Texture2D" uid="uid://bfcy68bi306i4" path="res://icon.svg" id="1_p16qf"]
+[ext_resource type="Texture2D" uid="uid://bnhsvh7haj868" path="res://assets/textures/other/Exit.png" id="1_p0qln"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vfsui"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_7gtrm"]
+radius = 3.64005
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekcxf"]
-size = Vector2(128, 17)
+size = Vector2(33, 7)
 
 [node name="Exit" type="Area2D"]
+position = Vector2(0, -32)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -34)
-shape = SubResource("CircleShape2D_vfsui")
+position = Vector2(-7, 12)
+shape = SubResource("CircleShape2D_7gtrm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_p0qln")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-7, 0)
 collision_mask = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-scale = Vector2(1, 0.140625)
-texture = ExtResource("1_p16qf")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, 28.5)
 shape = SubResource("RectangleShape2D_ekcxf")

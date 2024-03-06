@@ -9,6 +9,8 @@ class_name Player
 @export var jump_force = 200
 @export var speed = 125
 
+var key_amount = 0
+
 var active = true
 
 func _ready():
