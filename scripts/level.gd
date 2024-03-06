@@ -9,10 +9,10 @@ extends Node2D
 @onready var world_b = $World_B
 
 var player
-var in_world_a = true
+var flip_points
 
 func _ready():
-	var flip_points = get_tree().get_nodes_in_group("flip_point")
+	flip_points = get_tree().get_nodes_in_group("flip_point")
 	for point in flip_points:
 		point.flip_world.connect(_on_flip_world)
 	
@@ -31,6 +31,9 @@ func _on_flip_world():
 	var world_a_children = world_a.get_children()
 	for node in world_a_children:
 		node.toggle_show()
+	
+	for point in flip_points:
+		point.toggle_sprite()
 
 func _on_exit_body_entered(body):
 	if body is Player:
