@@ -16,6 +16,11 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 run/max_fps=60
 config/icon="res://icon.svg"
 
+[autoload]
+
+FlipTransition="*res://scenes/flip_transition.tscn"
+SceneTransition="*res://scenes/scene_transition.tscn"
+
 [display]
 
 window/size/viewport_width=480

@@ -24,6 +24,7 @@ func _ready():
 	death_zone.body_entered.connect(_on_deathzone_body_entered)
 
 func _on_flip_world():	
+	FlipTransition.fade_out()
 	var world_b_children = world_b.get_children()
 	for node in world_b_children:
 		node.toggle_show()
@@ -34,13 +35,15 @@ func _on_flip_world():
 	
 	for point in flip_points:
 		point.toggle_sprite()
+	FlipTransition.fade_in()
 
 func _on_exit_body_entered(body):
 	if body is Player:
 		player.active = false
-		await get_tree().create_timer(1.5).timeout
+		#await get_tree().create_timer(1.5).timeout
 		if next_level:
-			get_tree().change_scene_to_packed(next_level)
+			#get_tree().change_scene_to_packed(next_level)
+			SceneTransition.scene_transition(next_level)
 
 func _on_deathzone_body_entered(_body):
 	player.global_position = start.get_spawn_pos()

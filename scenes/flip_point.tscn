@@ -7,22 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0r786"]
 size = Vector2(17, 36)
 
-[sub_resource type="Animation" id="Animation_7k5jp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -18)]
-}
-
-[sub_resource type="Animation" id="Animation_gtdnu"]
+[sub_resource type="Animation" id="Animation_qsjmx"]
 resource_name = "up_and_down"
 loop_mode = 1
 tracks/0/type = "value"
@@ -35,13 +20,28 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, -17), Vector2(0, -14)]
+"values": [Vector2(0, -14), Vector2(0, -17)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_8j4bv"]
+[sub_resource type="Animation" id="Animation_2jo7h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tqha0"]
 _data = {
-"RESET": SubResource("Animation_7k5jp"),
-"up_and_down": SubResource("Animation_gtdnu")
+"RESET": SubResource("Animation_2jo7h"),
+"up_and_down": SubResource("Animation_qsjmx")
 }
 
 [node name="FlipPoint" type="Area2D" groups=["flip_point"]]
@@ -58,14 +58,13 @@ shape = SubResource("RectangleShape2D_0r786")
 
 [node name="HelpText" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(0, -18)
 texture = ExtResource("3_ssh6f")
 region_enabled = true
 region_rect = Rect2(97.998, 23.783, 17, 15)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HelpText"]
 libraries = {
-"": SubResource("AnimationLibrary_8j4bv")
+"": SubResource("AnimationLibrary_tqha0")
 }
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
