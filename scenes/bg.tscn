@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfc8j07ehghbh"]
+
+[ext_resource type="Script" path="res://scripts/bg.gd" id="1_3bte5"]
+[ext_resource type="Texture2D" uid="uid://chmn2giavjgwc" path="res://assets/textures/bg/night sky.png" id="1_p0jcj"]
+
+[node name="BG" type="CanvasLayer"]
+layer = -5
+script = ExtResource("1_3bte5")
+
+[node name="Sky" type="TextureRect" parent="."]
+z_index = -100
+offset_right = 485.0
+offset_bottom = 275.0
+texture = ExtResource("1_p0jcj")
+stretch_mode = 1

@@ -7,6 +7,8 @@ extends Node2D
 @onready var death_zone = $DeathZone
 @onready var world_a = $World_A
 @onready var world_b = $World_B
+@onready var tile_map = $TileMap
+@onready var bg = $BG
 
 var player
 var flip_points
@@ -35,6 +37,9 @@ func _on_flip_world():
 	
 	for point in flip_points:
 		point.toggle_sprite()
+	
+	tile_map.toggle_layers()
+	bg.toggle_background()
 	FlipTransition.fade_in()
 
 func _on_exit_body_entered(body):
