@@ -1,21 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://mey7pkjbgv0t"]
+[gd_scene load_steps=2 format=3 uid="uid://mey7pkjbgv0t"]
 
 [ext_resource type="Script" path="res://scripts/start.gd" id="1_nb3cr"]
-[ext_resource type="Texture2D" uid="uid://bfcy68bi306i4" path="res://icon.svg" id="1_y5mum"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8etn"]
-size = Vector2(128, 16)
-
-[node name="Start" type="StaticBody2D"]
-collision_mask = 2
+[node name="Start" type="Marker2D"]
 script = ExtResource("1_nb3cr")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 0.125)
-texture = ExtResource("1_y5mum")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_u8etn")
-
-[node name="SpawnPosition" type="Marker2D" parent="."]
-position = Vector2(0, -23)

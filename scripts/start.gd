@@ -1,6 +1,5 @@
-extends StaticBody2D
+extends Marker2D
 
-@onready var spawn_pos = $SpawnPosition
 
 func get_spawn_pos():
-	return spawn_pos.global_position
+	return global_position

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ena3j1xs88qo"]
+[gd_scene load_steps=20 format=3 uid="uid://ena3j1xs88qo"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_kscwo"]
 [ext_resource type="PackedScene" uid="uid://depyhy57y4ggq" path="res://scenes/level_2.tscn" id="2_r774b"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bxfary2msf7a7" path="res://scenes/death_zone.tscn" id="9_s2w4b"]
 [ext_resource type="PackedScene" uid="uid://dfc8j07ehghbh" path="res://scenes/bg.tscn" id="9_uaf1d"]
 [ext_resource type="PackedScene" uid="uid://cuusnv1lfqu4k" path="res://scenes/gate.tscn" id="11_yn5ia"]
+[ext_resource type="PackedScene" uid="uid://cwe08q7rywwcr" path="res://scenes/wall.tscn" id="12_n75ju"]
 [ext_resource type="PackedScene" uid="uid://cfowtntnf8i61" path="res://scenes/key.tscn" id="12_o2hwr"]
 
 [node name="Level" type="Node2D"]
@@ -77,14 +78,14 @@ layer_1/tile_data = PackedInt32Array(1179648, 65536, 6, 1114112, 65536, 5, 10485
 
 [node name="World_A" type="Node2D" parent="." groups=["world_a"]]
 
-[node name="Bridge" parent="World_A" instance=ExtResource("3_qkpjl")]
-position = Vector2(1546, 150)
-start_hidden = true
-
 [node name="World_B" type="Node2D" parent="." groups=["world_b"]]
 
 [node name="Bridge" parent="World_B" instance=ExtResource("3_qkpjl")]
-position = Vector2(1060, 202)
+position = Vector2(1056, 180)
+start_hidden = true
+
+[node name="Wall" parent="World_B" instance=ExtResource("12_n75ju")]
+position = Vector2(1498, 176)
 start_hidden = true
 
 [node name="Objects" type="Node2D" parent="."]
@@ -102,7 +103,7 @@ position = Vector2(962, 144)
 position = Vector2(1392, 144)
 
 [node name="Start" parent="." instance=ExtResource("6_ji5yt")]
-position = Vector2(81, 232)
+position = Vector2(44, 229)
 
 [node name="Exit" parent="." instance=ExtResource("7_uqkmu")]
 position = Vector2(2325, 144)
