@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6r76rrxuxjjc"]
+
+[ext_resource type="Script" path="res://scripts/HUD.gd" id="1_7im3c"]
+[ext_resource type="Texture2D" uid="uid://b4yb6nfcw6pxg" path="res://assets/textures/other/key.png" id="2_y8yo4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t1e7f"]
+
+[node name="UILayer" type="CanvasLayer"]
+
+[node name="HUD" type="Control" parent="." groups=["hud"]]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 50.0
+offset_bottom = 46.0
+script = ExtResource("1_7im3c")
+
+[node name="KeyLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 90.0
+offset_bottom = 23.0
+text = "0"
+label_settings = SubResource("LabelSettings_t1e7f")
+
+[node name="Key" type="TextureRect" parent="HUD"]
+layout_mode = 0
+offset_top = -11.0
+offset_right = 40.0
+offset_bottom = 29.0
+texture = ExtResource("2_y8yo4")
+
+[node name="slash" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 62.0
+offset_right = 102.0
+offset_bottom = 23.0
+text = "/
+"
+
+[node name="KeyTotal" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 71.0
+offset_right = 111.0
+offset_bottom = 23.0
+text = "0
+"

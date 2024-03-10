@@ -47,7 +47,7 @@ _data = {
 "up_and_down": SubResource("Animation_ptewk")
 }
 
-[node name="Gate" type="Area2D"]
+[node name="Gate" type="Area2D" groups=["gate"]]
 position = Vector2(0, -32)
 collision_mask = 2
 script = ExtResource("1_b060k")

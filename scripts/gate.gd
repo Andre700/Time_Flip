@@ -4,10 +4,10 @@ extends Area2D
 @onready var help_text = $HelpText
 @onready var animation_player = $HelpText/AnimationPlayer
 
-var required_keys
+var required_keys = 0
 
-func _ready():
-	required_keys = get_tree().get_nodes_in_group('key').size()
+func set_required_keys(value):
+	required_keys = value
 
 func _process(_delta):
 	if overlaps_body(player) and Input.is_action_just_pressed("action"):

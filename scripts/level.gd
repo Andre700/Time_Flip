@@ -9,11 +9,25 @@ extends Node2D
 @onready var world_b = $World_B
 @onready var tile_map = $TileMap
 @onready var bg = $BG
+@onready var hud = $UILayer/HUD
 
 var player
 var flip_points
+var gate
+var keys
 
 func _ready():
+	keys = get_tree().get_nodes_in_group('key')
+	for key in keys:
+		key.picked_up.connect(_on_key_picked_up)
+	
+	if keys:
+		hud.set_key_total(keys.size())
+	
+	gate = get_tree().get_first_node_in_group('gate')
+	if gate:	
+		gate.set_required_keys(keys.size())
+	
 	flip_points = get_tree().get_nodes_in_group("flip_point")
 	for point in flip_points:
 		point.flip_world.connect(_on_flip_world)
@@ -53,3 +67,7 @@ func _on_exit_body_entered(body):
 func _on_deathzone_body_entered(_body):
 	player.global_position = start.get_spawn_pos()
 	player.velocity = Vector2.ZERO
+
+func _on_key_picked_up():
+	player.key_amount += 1
+	hud.set_key_amount(player.key_amount)

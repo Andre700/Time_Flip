@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ena3j1xs88qo"]
+[gd_scene load_steps=21 format=3 uid="uid://ena3j1xs88qo"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_kscwo"]
 [ext_resource type="PackedScene" uid="uid://depyhy57y4ggq" path="res://scenes/level_2.tscn" id="2_r774b"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cuusnv1lfqu4k" path="res://scenes/gate.tscn" id="11_yn5ia"]
 [ext_resource type="PackedScene" uid="uid://cwe08q7rywwcr" path="res://scenes/wall.tscn" id="12_n75ju"]
 [ext_resource type="PackedScene" uid="uid://cfowtntnf8i61" path="res://scenes/key.tscn" id="12_o2hwr"]
+[ext_resource type="PackedScene" uid="uid://c6r76rrxuxjjc" path="res://scenes/ui_layer.tscn" id="20_qhsbq"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_kscwo")
@@ -113,3 +114,5 @@ position = Vector2(858, 328)
 
 [node name="Player" parent="." instance=ExtResource("2_t1d67")]
 position = Vector2(68, 147)
+
+[node name="UILayer" parent="." instance=ExtResource("20_qhsbq")]
