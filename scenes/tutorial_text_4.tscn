@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0kcsnu74cjti"]
+[gd_scene load_steps=3 format=3 uid="uid://b0kcsnu74cjti"]
+
+[ext_resource type="Texture2D" uid="uid://cxjvl170mjl50" path="res://assets/textures/other/key caps.png" id="1_jxes0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4r7ys"]
 font_size = 11
@@ -15,7 +17,11 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "Other obsticles require you to deactivate Flip Points"
+text = "Deactivate Flip Points"
 label_settings = SubResource("LabelSettings_4r7ys")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(57, 25)
+texture = ExtResource("1_jxes0")
+region_enabled = true
+region_rect = Rect2(97.629, 23.32, 17, 16)
