@@ -41,6 +41,10 @@ func _ready():
 	exit.body_entered.connect(_on_exit_body_entered)
 	death_zone.body_entered.connect(_on_deathzone_body_entered)
 
+func _process(_delta):
+	if Input.is_action_just_pressed("quit"):
+		get_tree().quit()
+
 func _on_flip_world():	
 	FlipTransition.fade_out()
 	var world_b_children = world_b.get_children()
@@ -61,9 +65,7 @@ func _on_flip_world():
 func _on_exit_body_entered(body):
 	if body is Player:
 		player.active = false
-		#await get_tree().create_timer(1.5).timeout
 		if next_level:
-			#get_tree().change_scene_to_packed(next_level)
 			SceneTransition.scene_transition(next_level)
 
 func _on_deathzone_body_entered(_body):

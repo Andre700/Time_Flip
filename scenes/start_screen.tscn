@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqv148l1xi1o8"]
+
+[ext_resource type="Texture2D" uid="uid://u24pwkoyc72b" path="res://assets/textures/other/Title.png" id="1_rd6qt"]
+[ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_ymlku"]
+[ext_resource type="PackedScene" uid="uid://dfc8j07ehghbh" path="res://scenes/bg.tscn" id="2_bc852"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ymlku")
+
+[node name="Title" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -198.0
+offset_top = -90.0
+offset_right = 212.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rd6qt")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = 26.0
+offset_right = 64.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "START"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = 64.0
+offset_right = 28.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "QUIT"
+
+[node name="BG" parent="." instance=ExtResource("2_bc852")]
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
