@@ -10,6 +10,7 @@ extends Node2D
 @onready var tile_map = $TileMap
 @onready var bg = $BG
 @onready var hud = $UILayer/HUD
+@onready var ui_layer = $UILayer
 
 var player
 var flip_points
@@ -67,6 +68,8 @@ func _on_exit_body_entered(body):
 		player.active = false
 		if next_level:
 			SceneTransition.scene_transition(next_level)
+		else:
+			ui_layer.show_win_screen(true)
 
 func _on_deathzone_body_entered(_body):
 	player.global_position = start.get_spawn_pos()

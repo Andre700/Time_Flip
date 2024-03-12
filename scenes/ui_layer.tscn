@@ -1,12 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6r76rrxuxjjc"]
+[gd_scene load_steps=9 format=3 uid="uid://c6r76rrxuxjjc"]
 
 [ext_resource type="Script" path="res://scripts/HUD.gd" id="1_7im3c"]
+[ext_resource type="Script" path="res://scripts/ui_layer.gd" id="1_x676h"]
 [ext_resource type="Texture2D" uid="uid://b4yb6nfcw6pxg" path="res://assets/textures/other/key.png" id="2_y8yo4"]
+[ext_resource type="PackedScene" uid="uid://cxrvgj881d0r3" path="res://scenes/win_screen.tscn" id="3_2b1x0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t1e7f"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bua5v"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sa0ni"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1250y"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="UILayer" type="CanvasLayer"]
 layer = 0
+script = ExtResource("1_x676h")
 
 [node name="HUD" type="Control" parent="." groups=["hud"]]
 layout_mode = 3
@@ -39,6 +56,7 @@ offset_right = 102.0
 offset_bottom = 23.0
 text = "/
 "
+label_settings = SubResource("LabelSettings_bua5v")
 
 [node name="KeyTotal" type="Label" parent="HUD"]
 layout_mode = 0
@@ -47,6 +65,7 @@ offset_right = 111.0
 offset_bottom = 23.0
 text = "0
 "
+label_settings = SubResource("LabelSettings_sa0ni")
 
 [node name="LevelLabel" type="Label" parent="HUD"]
 layout_mode = 1
@@ -58,3 +77,7 @@ offset_right = 420.0
 offset_bottom = 23.0
 grow_horizontal = 0
 text = "Level 0"
+label_settings = SubResource("LabelSettings_1250y")
+
+[node name="WinScreen" parent="." instance=ExtResource("3_2b1x0")]
+visible = false

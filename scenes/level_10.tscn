@@ -53,7 +53,7 @@ start_hidden = true
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="Gate" parent="Objects" instance=ExtResource("4_grym1")]
-position = Vector2(590, 16)
+position = Vector2(577, 16)
 
 [node name="Key" parent="Objects" instance=ExtResource("5_08v7n")]
 position = Vector2(448, 225)
