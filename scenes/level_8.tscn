@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cfowtntnf8i61" path="res://scenes/key.tscn" id="7_u8p1m"]
 [ext_resource type="PackedScene" uid="uid://b6w3xc0u2o77p" path="res://scenes/flip_point.tscn" id="8_m7hd7"]
 
-[node name="Level8" type="Node2D"]
+[node name="Level 8" type="Node2D"]
 script = ExtResource("1_x14x6")
 next_level = ExtResource("2_c344w")
 

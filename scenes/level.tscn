@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cfowtntnf8i61" path="res://scenes/key.tscn" id="12_o2hwr"]
 [ext_resource type="PackedScene" uid="uid://c6r76rrxuxjjc" path="res://scenes/ui_layer.tscn" id="20_qhsbq"]
 
-[node name="Level" type="Node2D"]
+[node name="Level 1" type="Node2D"]
 script = ExtResource("1_kscwo")
 next_level = ExtResource("2_r774b")
 

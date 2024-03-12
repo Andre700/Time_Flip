@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b6w3xc0u2o77p" path="res://scenes/flip_point.tscn" id="7_tvxf5"]
 [ext_resource type="PackedScene" uid="uid://c6r76rrxuxjjc" path="res://scenes/ui_layer.tscn" id="8_b2cuh"]
 
-[node name="Level10" type="Node2D"]
+[node name="Level 10" type="Node2D"]
 script = ExtResource("1_w0xq5")
 
 [node name="BG" parent="." instance=ExtResource("2_x1t1e")]

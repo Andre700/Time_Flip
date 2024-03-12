@@ -17,6 +17,8 @@ var gate
 var keys
 
 func _ready():
+	hud.set_level_name(name)
+	
 	keys = get_tree().get_nodes_in_group('key')
 	for key in keys:
 		key.picked_up.connect(_on_key_picked_up)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dm51kt1qdegty"]
+[gd_scene load_steps=15 format=3 uid="uid://dm51kt1qdegty"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_r8p3y"]
+[ext_resource type="PackedScene" uid="uid://hlpxaqoti51g" path="res://scenes/level_10.tscn" id="2_kd65f"]
 [ext_resource type="PackedScene" uid="uid://dfc8j07ehghbh" path="res://scenes/bg.tscn" id="2_slapa"]
 [ext_resource type="PackedScene" uid="uid://bw07ugmu35qqd" path="res://scenes/tile_map.tscn" id="3_yrlok"]
 [ext_resource type="PackedScene" uid="uid://kmcmayvbebv6" path="res://scenes/bridge.tscn" id="4_6u7yo"]
@@ -14,8 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://cfowtntnf8i61" path="res://scenes/key.tscn" id="8_ibsun"]
 [ext_resource type="PackedScene" uid="uid://c6r76rrxuxjjc" path="res://scenes/ui_layer.tscn" id="8_rd8g0"]
 
-[node name="Level9" type="Node2D"]
+[node name="Level 9" type="Node2D"]
 script = ExtResource("1_r8p3y")
+next_level = ExtResource("2_kd65f")
 
 [node name="BG" parent="." instance=ExtResource("2_slapa")]
 

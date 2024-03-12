@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cuusnv1lfqu4k" path="res://scenes/gate.tscn" id="7_dcdyn"]
 [ext_resource type="PackedScene" uid="uid://c6r76rrxuxjjc" path="res://scenes/ui_layer.tscn" id="7_mc0w4"]
 
-[node name="Level7" type="Node2D"]
+[node name="Level 7" type="Node2D"]
 script = ExtResource("1_qciti")
 next_level = ExtResource("2_dwjfd")
 
