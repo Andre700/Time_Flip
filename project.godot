@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 
 FlipTransition="*res://scenes/flip_transition.tscn"
 SceneTransition="*res://scenes/scene_transition.tscn"
+AudioPlayer="*res://scenes/audio_player.tscn"
 
 [display]
 

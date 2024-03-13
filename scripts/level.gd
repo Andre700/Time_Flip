@@ -47,6 +47,7 @@ func _process(_delta):
 		get_tree().quit()
 
 func _on_flip_world():	
+	AudioPlayer.play_sfx("time_warp")
 	FlipTransition.fade_out()
 	var world_b_children = world_b.get_children()
 	for node in world_b_children:
@@ -69,6 +70,7 @@ func _on_exit_body_entered(body):
 		if next_level:
 			SceneTransition.scene_transition(next_level)
 		else:
+			AudioPlayer.play_sfx("win")
 			ui_layer.show_win_screen(true)
 
 func _on_deathzone_body_entered(_body):
@@ -76,5 +78,6 @@ func _on_deathzone_body_entered(_body):
 	player.velocity = Vector2.ZERO
 
 func _on_key_picked_up():
+	AudioPlayer.play_sfx("key")
 	player.key_amount += 1
 	hud.set_key_amount(player.key_amount)

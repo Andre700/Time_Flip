@@ -12,6 +12,7 @@ func set_required_keys(value):
 func _process(_delta):
 	if overlaps_body(player) and Input.is_action_just_pressed("action"):
 		if can_be_opened():
+			AudioPlayer.play_sfx("gate")
 			queue_free()
 
 
