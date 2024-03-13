@@ -22,7 +22,6 @@ func play_sfx(sfx_name: String):
 	var asp = AudioStreamPlayer.new()
 	asp.stream = stream
 	asp.name = "SFX"
-	asp.volume_db = -10
 	
 	add_child(asp)
 	

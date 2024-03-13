@@ -11,10 +11,12 @@ config_version=5
 [application]
 
 config/name="Time Flip"
+config/version="1.0.0.0"
 run/main_scene="res://scenes/start_screen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 run/max_fps=60
 config/icon="res://icon.svg"
+config/windows_native_icon="res://assets/MC Icon.ico"
 
 [autoload]
 
